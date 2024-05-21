@@ -100,10 +100,10 @@ defaults:
     values:
       layout: single
       author_profile: true
-  # _arts
+  # _art
   - scope:
       path: ""
-      type: arts
+      type: art
     values:
       layout: single
       author_profile: true
