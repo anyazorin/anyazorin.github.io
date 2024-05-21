@@ -58,8 +58,7 @@ plugins:
 author:
   name   : "Anya Zorin"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "CS@NYU"
-  text   : "Building a robot hand 🦾"
+  bio    : "CS@NYU <br /> Building a robot hand 🦾"
   location : "NYC"
   links:
     - label: "GitHub"
