@@ -11,5 +11,5 @@ gallery:
     alt: "placeholder image 3"
     title: "BMX Frog"
 ---
-
+### Lino Cut Printmaking
 {% include gallery %}
