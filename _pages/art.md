@@ -1,7 +1,8 @@
 ---
 permalink: /art/
 title: "Art"
-gallery_printmaking:
+layout
+gallery:
   - image_path: /assets/images/PM_sardines.jpeg
     alt: "placeholder image 1"
     title: "Sardines"
@@ -10,8 +11,8 @@ gallery_printmaking:
     title: "Baba Yaga House"
  - image_path: /assets/images/PM_bmxfrog.png
     alt: "placeholder image 3"
-    title: "BMX Frog"
+    title: "BMX Frog
 ---
 
 # Lino Cut Printmaking
-{% include gallery id="gallery_printmaking" %}
+{% include gallery id="gallery" %}
