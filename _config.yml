@@ -52,15 +52,14 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
   - jemoji
   - jekyll-include-cache
 
 author:
   name   : "Anya Zorin"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "CS@NYU \n
-  Building a robotic hand"
+  bio    : "CS@NYU"
+  text   : "Building a robot hand 🦾"
   location : "NYC"
   links:
     - label: "GitHub"
