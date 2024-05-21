@@ -1,9 +1,9 @@
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
+  - title: "Robot Hand"
+    url: /robot-hand/
+  - title: "Projects"
+    url: /projects/
+  - title: "Art"
+    url: /art/
   - title: "About"
     url: /about/
