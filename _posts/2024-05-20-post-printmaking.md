@@ -9,6 +9,6 @@ gallery:
       title: "Baba Yaga House"
     - image_path: /assets/images/PM_bmxfrog.png
       alt: "placeholder image 3"
-      title: "BMX Frog
+      title: "BMX Frog"
 ---
 {% include gallery %}
