@@ -1,7 +1,6 @@
 ---
 permalink: /art/
 title: "Art"
-layout
 gallery:
   - image_path: /assets/images/PM_sardines.jpeg
     alt: "placeholder image 1"
