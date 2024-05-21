@@ -77,7 +77,7 @@ atom_feed:
   hide: true
 
 collections:
-  arts:
+  art:
     output: true
     permalink: /:collection/:path/
 
