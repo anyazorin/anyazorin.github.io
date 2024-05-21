@@ -1,7 +1,9 @@
 ---
-permalink: /art/
 title: "Art"
+layout: collection
+permalink: /art/
+collection: art
+entries_layout: grid
+classes: wide
 ---
 
-# Lino Cut Printmaking
-![](../assets/images/PM_sardines.jpeg) ![](../assets/images/PM_babayagahouse.png)  ![](../assets/images/PM_bmxfrog.png) 
