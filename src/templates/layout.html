@@ -1,0 +1,141 @@
+{% from "components/button.html" import button %}
+{% from "components/fieldset.html" import fieldset %}
+
+{# ── TOC tree macro — rendered once for sidebar, once for dropdown ── #}
+{% macro toc_content(prefix) %}
+<div class="font-mono text-lg leading-6 select-none text-black dark:text-white">
+  <div>~/</div>
+  <a href="/#readme"       class="block hover:underline whitespace-pre">├── README.md</a>
+  <div class="relative">
+    <button
+      onclick="document.getElementById('{{ prefix }}-projects').classList.toggle('hidden')"
+      class="block hover:underline whitespace-pre w-full text-left font-mono text-lg leading-6 text-black dark:text-white"
+    >├── projects/</button>
+    <div
+      id="{{ prefix }}-projects"
+      class="hidden absolute left-0 top-full mt-0.5 bg-white dark:bg-black outline outline-1 outline-black dark:outline-white shadow-[3px_3px_0px_1px_rgba(0,0,0,0.5)] dark:shadow-[3px_3px_0px_1px_rgba(255,255,255,0.6)] px-2 py-1 z-[60]"
+    >
+      {% for post in posts_by_folder.get('projects', []) %}
+        {% if loop.last %}
+        <a href="/projects/{{ post.slug }}" class="block hover:underline whitespace-nowrap">└── {{ post.title | lower | replace(' ', '_') }}</a>
+        {% else %}
+        <a href="/projects/{{ post.slug }}" class="block hover:underline whitespace-nowrap">├── {{ post.title | lower | replace(' ', '_') }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <a href="/#publications" class="block hover:underline whitespace-pre">├── publications/</a>
+  <a href="/#friends"      class="block hover:underline whitespace-pre">├── friends.md</a>
+  <a href="/#art"          class="block hover:underline whitespace-pre">├── art/</a>
+  <a href="/#adventure"    class="block hover:underline whitespace-pre">└── adventure/</a>
+</div>
+{% endmacro %}
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" href="/favicon.svg" />
+  <title>{{ title }}</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/index.css" />
+  <script>
+    /*to prevent Firefox FOUC, this must be here*/
+    let FF_FOUC_FIX;
+  </script>
+</head>
+<body>
+
+  {# ── Sidebar TOC: visible when viewport is wide enough ── #}
+  <nav class="hidden min-[1440px]:block fixed left-3 top-16 z-40">
+    {{ toc_content('toc-sidebar') }}
+  </nav>
+
+  {# ── Dropdown TOC: visible on smaller screens ── #}
+  <div class="min-[1440px]:hidden fixed left-2 top-3 z-50">
+    <button
+      id="toc-btn"
+      class="font-mono text-xs rounded-none outline outline-1 outline-black dark:outline-white px-2 h-6 bg-white dark:bg-black text-black dark:text-white shadow-[2px_2px_0px_1px_rgba(0,0,0,0.5)] dark:shadow-[2px_2px_0px_1px_rgba(255,255,255,0.6)] hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
+      aria-label="Table of contents"
+    >~/</button>
+    <div
+      id="toc-dropdown-menu"
+      class="hidden absolute left-0 top-7 bg-white dark:bg-black outline outline-1 outline-black dark:outline-white shadow-[3px_3px_0px_1px_rgba(0,0,0,0.5)] dark:shadow-[3px_3px_0px_1px_rgba(255,255,255,0.6)] p-3"
+    >
+      {{ toc_content('toc-dropdown') }}
+    </div>
+  </div>
+
+  <main
+    class="flex min-h-screen flex-col max-w-5xl mx-auto px-4 py-4 sm:py-8 leading-5 dark:bg-black dark:text-white font-sans"
+  >
+    <div class="flex justify-between flex-wrap mb-2">
+      <a href="/">
+        <h1 class="font-mono text-2xl font-bold">{{ name }}</h1>
+      </a>
+      <div
+        class="flex flex-col sm:flex-row justify-between gap-2 align-middle items-center my-1"
+      >
+        {% call button("https://www.linkedin.com/in/anya-zorin/", "w-32 bg-[#fffff] text-black") %}
+          <div style="mask-image: url('/assets/linkedin.svg');" class="icon"></div>
+          <span class="ms-1">LinkedIn</span>
+        {% endcall %}
+        {%
+          call
+          button("https://github.com/anyazorin", "w-32")
+        %}
+          <div style="mask-image: url('/assets/github.svg');" class="icon"></div>
+          <span class="ms-1">GitHub</span>
+        {% endcall %}
+        <!-- {% call button("/assets/resume.pdf", "w-32") %}
+          <span class="ms-1">Resume</span>
+        {% endcall %} -->
+      </div>
+    </div>
+    {% block content %}{% endblock %}
+    <div class="h-3"></div>
+    {% call fieldset("cat README.md") %}
+      <div class="flex flex-row justify-between">
+        <span class="prose dark:prose-invert">
+          Source code on
+          <a href="https://github.com/sagarreddypatil/portfolio-website">
+            GitHub
+          </a>
+          thanks to <a href="https://sagarpatil.me/">Sagar Patil</a>
+        </span>
+      </div>
+    {% endcall %}
+  </main>
+
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    document.getElementById('toc-btn').addEventListener('click', function(e) {
+      e.stopPropagation();
+      document.getElementById('toc-dropdown-menu').classList.toggle('hidden');
+    });
+    document.addEventListener('click', function(e) {
+      var menu = document.getElementById('toc-dropdown-menu');
+      var btn  = document.getElementById('toc-btn');
+      if (menu && !menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

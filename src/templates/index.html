@@ -1,0 +1,168 @@
+{% extends "layout.html" %}
+{% from "components/fieldset.html" import fieldset %}
+
+{% block content %}
+
+  <div class="flex flex-col gap-4">
+
+    <div id="readme">
+      {% call fieldset("cat README.md") %}
+        <div class="flex flex-col lg:flex-row gap-3 text-lg">
+          <article class="text-black text-lg prose-p:m-0 flex flex-col gap-4">
+            <p>
+              Hi! I'm a robotisist, programmer and creative based in NYC, and I'm always looking to learn new things to bridge gaps between different fields.
+            </p>
+            <p>
+              [write bio about what I beleive in here]
+            </p>
+            <p>
+              I graduated from NYU with a degree in Computer Science, and I am currently a researcher at UC San Diego with professor Xiaolong Wang, where I work on figuring out the advantages of different tactile sensors, and when they should be used for learned robot manipulation. I previously worked at NYU with professor Lerrel Pinto, where I built Ruka, an <a href="https://ruka-hand.github.io/">open source robot hand</a> with learned controls.
+            </p>
+            <p>
+              Feel free to reach out if you want to work on something cool together, or just want to chat about anything at all!
+            </p>
+          </article>
+          <img
+            src="/assets/me-small.jpg"
+            alt="me"
+            class="h-[350px] object-cover"
+            loading="eager"
+          />
+        </div>
+      {% endcall %}
+    </div>
+
+    <div id="projects">
+      {% call fieldset("ls ~/projects") %}
+        {{ lists["projects"]|safe }}
+      {% endcall %}
+    </div>
+
+    <div id="publications">
+      {% call fieldset("ls ~/publications") %}
+        {{ lists["publications"]|safe }}
+      {% endcall %}
+    </div>
+
+    <div id="friends">
+      {% call fieldset("cat ~/friends.md") %}
+        <article>
+          Cool friends working on cool stuff
+          <ul>
+            <li><a href="https://abuynits.github.io/">Alexiy Buynitsky</a> (who showed me this website template :) )</li>
+            <li><a href="https://www.xano.me/">Xano Sweeting</a></li>
+            <li><a href="https://an-axolotl.github.io/fay-robotics.github.io/">Kehlani Fay</a></li>
+            <li><a href="https://irmakguzey.github.io/">Irmak Guzey</a></li>
+            <li><a href="https://maceykeung.com/">Macey Keung</a></li>
+          </ul>
+        </article>
+      {% endcall %}
+    </div>
+
+    <div id="art">
+      {% call fieldset("ls ~/art/") %}
+        <div>
+          This is my miscillaneous art, including sketches, linocut prints, metalwork, and more!
+          <section class="grid grid-flow-row-dense grid-cols-9 gap-1 mt-2">
+            
+            <img
+              src="/assets/art/printmaking/sardine.jpg"
+              class="row-span-1 col-span-2"
+              alt="sardine"
+            />
+            <img
+              src="/assets/art/printmaking/frog.jpg"
+              class="row-span-1 col-span-4"
+              alt="frog"
+            />
+           
+            
+             <img
+              src="/assets/art/sketches/stool_girl.png"
+              class="row-span-3 col-span-3 col-start-7 row-start-1"
+              alt="stool_girl"
+            />
+             <img
+              src="/assets/art/sketches/flowers.png"
+              class="row-span-2 col-span-6"
+              alt="frog"
+            />
+             <img
+              src="/assets/art/metalsmithing/egg.png"
+              class="row-span-1 col-span-3 col-start-7 row-start-3"
+              alt="egg"
+            />
+           
+            <img
+              src="/assets/art/printmaking/babayaga.png"
+              class="row-span-2 col-span-4"
+              alt="babayaga"
+            />
+            <img
+              src="/assets/art/printmaking/turnup.png"
+              class="row-span-1 col-span-2"
+              alt="turnup"
+            />
+            <img
+              src="/assets/art/sketches/drafting_scs.png"
+              class="row-span-1 col-span-3"
+              alt="drafting"
+            />
+            <img
+              src="/assets/art/misc/old_guy.png"
+              class="row-span-1 col-span-3"
+              alt="old_guy"
+            />
+            
+            <!-- <img
+              src="/assets/art/sketches/lilguy.png"
+              class="row-span-1 col-span-2"
+              alt="lilguy"
+            />
+            <img
+              src="/assets/art/metalsmithing/heron.png"
+              class="row-span-1 col-span-3"
+              alt="heron"
+            />
+
+             <img
+              src="/assets/art/misc/tshirt.png"
+              class="row-span-1 col-span-2"
+              alt="tshirt"
+            />
+
+             
+
+            <img
+              src="/assets/art/printmaking/macey_ref.png"
+              class="row-span-1 col-span-4"
+              alt="macey_ref"
+            />
+            
+            
+            <img
+              src="/assets/art/misc/bass_human.jpg"
+              class="row-span-1 col-span-3"
+              alt="bass_human"
+            /> -->
+            
+          </section>
+        </div>
+      {% endcall %}
+    </div>
+
+    <div id="adventure">
+      {% call fieldset("ls ~/adventure/") %}
+        <div>
+          This is a random selection of photos from my adventures, many of which involve bikes. I love building bikes, riding bikes, and talking bikes.
+          <section class="grid grid-flow-row-dense grid-cols-5 gap-1 mt-2">
+            
+             
+          </section>
+        </div>
+      {% endcall %}
+    </div>
+
+  </div>
+
+{% endblock %}
