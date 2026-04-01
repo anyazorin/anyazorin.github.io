@@ -1,6 +1,9 @@
 ---
 title: "TacO: Tactile Benchmark"
 summary: "Benchmarking tactile sensors for object manipulation"
-coverImage: "/assets/amogus-in-action.JPG"
-order: 1
+coverImage: "/assets/taco/sensor_fig_crop.png"
+order: 6
 ---
+*This project is in progress and will be released by early to mid April.*
+
+**Paper Abstract:** While vision-based learning from demonstrations has achieved remarkable success in enabling robots to perform manipulation tasks and high-level semantic reasoning, it remains insufficient for complex, contact-rich manipulation. These fine-grained, low-level tasks are still bottlenecked by the inherent limitations of visual feedback, which cannot capture the dynamics essential for precise physical interactions. Despite broad agreement that tactile sensing improves manipulation, there is no empirical guidance on which tactile sensors are best suited for which manipulation tasks. In this paper, we provide a systematic, task-driven evaluation of tactile sensors for robot manipulation and propose a framework for selecting and evaluating sensors based on manipulation policy performance. Separate manipulation policies are trained for tactile sensors of four distinct modalities: visual, acoustic, magnetic, and resistive, across three tasks: pick-and-place with unknown mass, object reorientation, and plug insertion. For each task, an analysis of how sensor properties such as spatial resolution, shear sensing, and tactile representation, and the inherent material friction affect task performances is done. Rather than tactile sensing being universally beneficial in the same way, our results show that the usefulness of tactile information depends strongly on sensor modality, material properties, and the specific manipulation tasks. All of the tactile sensors, code, data, and hardware setup for sensor characterization will be publicly available on the project website.

@@ -10,14 +10,12 @@
         <div class="flex flex-col lg:flex-row gap-3 text-lg">
           <article class="text-black text-lg prose-p:m-0 flex flex-col gap-4">
             <p>
-              Hi! I'm a robotisist, programmer and creative based in NYC, and I'm always looking to learn new things to bridge gaps between different fields.
+              Hi! I'm a robotisist, programmer and creative based in NYC, who refuses to stay in one lane.
             </p>
             <p>
-              [write bio about what I beleive in here]
+              I try to do elegant engineering while keeping my work as accessible as possible. I want to break the mold of what can be accomplished with technology by finding new ways to help people, wether it be practical or as a source of wonder and joy. 
             </p>
-            <p>
-              I graduated from NYU with a degree in Computer Science, and I am currently a researcher at UC San Diego with professor Xiaolong Wang, where I work on figuring out the advantages of different tactile sensors, and when they should be used for learned robot manipulation. I previously worked at NYU with professor Lerrel Pinto, where I built Ruka, an <a href="https://ruka-hand.github.io/">open source robot hand</a> with learned controls.
-            </p>
+            
             <p>
               Feel free to reach out if you want to work on something cool together, or just want to chat about anything at all!
             </p>
@@ -63,7 +61,8 @@
       {% call fieldset("ls ~/art/") %}
         <div>
           This is my miscillaneous art, including sketches, linocut prints, metalwork, and more!
-          <section class="grid grid-flow-row-dense grid-cols-9 gap-1 mt-2">
+          <section class="grid grid-flow-row-dense grid-cols-9 gap-1 mt-2 [grid-template-rows:auto_auto_auto_auto_260px_35px_100px_110px_auto]">
+
             
             <img
               src="/assets/art/printmaking/sardine.jpg"
@@ -95,7 +94,7 @@
            
             <img
               src="/assets/art/printmaking/babayaga.png"
-              class="row-span-2 col-span-4"
+              class="row-span-3 col-span-4"
               alt="babayaga"
             />
             <img
@@ -110,41 +109,37 @@
             />
             <img
               src="/assets/art/misc/old_guy.png"
-              class="row-span-1 col-span-3"
+              class="row-span-3 col-span-3"
               alt="old_guy"
             />
             
-            <!-- <img
+            
+            <img
               src="/assets/art/sketches/lilguy.png"
               class="row-span-1 col-span-2"
               alt="lilguy"
             />
+             <img
+              src="/assets/art/misc/tshirt.png"
+              class="row-span-3 col-span-2 col-start-8 row-start-6"
+              alt="tshirt"
+            />
+             <img
+              src="/assets/art/printmaking/macey_ref.png"
+              class="row-span-3 col-span-4"
+              alt="macey_ref"
+            />
             <img
               src="/assets/art/metalsmithing/heron.png"
-              class="row-span-1 col-span-3"
+              class="row-span-3 col-span-3"
               alt="heron"
             />
 
-             <img
-              src="/assets/art/misc/tshirt.png"
-              class="row-span-1 col-span-2"
-              alt="tshirt"
-            />
-
-             
-
-            <img
-              src="/assets/art/printmaking/macey_ref.png"
-              class="row-span-1 col-span-4"
-              alt="macey_ref"
-            />
-            
-            
             <img
               src="/assets/art/misc/bass_human.jpg"
-              class="row-span-1 col-span-3"
+              class="row-span-1 col-span-2 col-start-8 row-start-9"
               alt="bass_human"
-            /> -->
+            />
             
           </section>
         </div>
@@ -154,10 +149,62 @@
     <div id="adventure">
       {% call fieldset("ls ~/adventure/") %}
         <div>
-          This is a random selection of photos from my adventures, many of which involve bikes. I love building bikes, riding bikes, and talking bikes.
-          <section class="grid grid-flow-row-dense grid-cols-5 gap-1 mt-2">
+          This is a random selection of photos from my adventures, many of which involve bikes and nature.
+          <section class="grid grid-flow-row-dense grid-cols-4 gap-1 mt-2">
+           
+           <img
+              src="/assets/adventure/san_diego.png"
+              class="row-span-1 col-span-2"
+              alt="san_diego"
+            />
+             <img
+              src="/assets/adventure/deathvalley.jpg"
+              class="row-span-1 col-span-2"
+              alt="deathvalley"
+            />
+            <img
+              src="/assets/adventure/kings.jpg"
+              class="row-span-1 col-span-2"
+              alt="kings"
+            />
             
-             
+             <img
+              src="/assets/adventure/hume_lake.jpg"
+              class="row-span-1 col-span-2"
+              alt="hume_lake"
+            />
+           
+             <img
+              src="/assets/adventure/bikes/bike_rig.png"
+              class="row-span-1 col-span-2"
+              alt="bike_rig"
+            />
+             <img
+              src="/assets/adventure/rock_kings_canyon.jpg"
+              class="row-span-1 col-span-2"
+              alt="rock_kings_canyon"
+            />
+             <img
+              src="/assets/adventure/bikes/vermont_mud.png"
+              class="row-span-2 col-span-2"
+              alt="vermont_mud"
+            />
+             <img
+              src="/assets/adventure/bikes/lake_camp.png"
+              class="row-span-1 col-span-2"
+              alt="lake_camp"
+            />
+              <img
+              src="/assets/adventure/bikes/snow_minivelo.jpg"
+              class="row-span-1 col-span-2"
+              alt="snow_minivelo"
+            />
+             <!-- <img
+              src="/assets/adventure/bikes/vermont_dog.png"
+              class="row-span-1 col-span-2"
+              alt="vermont_dog"
+            /> -->
+            
           </section>
         </div>
       {% endcall %}

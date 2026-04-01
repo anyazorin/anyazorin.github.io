@@ -3,7 +3,7 @@ title: "TacO: Benchmarking Tactile Sensors for Object Manipulation"
 authors: "<em>Anya Zorin</em>, Zilin Si, Myungsun Park, Junsung Park, Alexiy Buynitsky, Sachin Bhadang, Taejun Park, Sohee John Yoon, Yong-Lae Park, Oliver Kroemer, Zeynep Temel, Michael T. Tolley, Sha Yi, Xiaolong Wang"
 venue: "preprint"
 year: 2026
-thumbnail: "/assets/taco_prev.gif"
+thumbnail: "/assets/taco/sensor_fig_crop.png"
 arxiv: ""
 website: ""
 order: 1

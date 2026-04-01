@@ -202,4 +202,4 @@ dist/
 *.MP4
 *.MOV
 *.mov
-public/assets/*
+public/assets/unused/*
