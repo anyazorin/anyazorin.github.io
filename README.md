@@ -1,5 +1,7 @@
 # Portfolio Website
 
+My portfolio website, built with a custom static site generator
+
 ## Setup
 ```sh
 npm install -g yarn  # if yarn is not installed
